@@ -32,16 +32,16 @@ button {
   font-size: 20px;
   color: rgb(255, 255, 255);
   padding: 14px 30px;
-  transition: 3000ms;
+  transition: 300ms;
   width: 181px;
   box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
-  border-radius: 1px;
+  border-radius: 2px;
   background: rgb(181, 196, 16);
  
   }
   button:hover{
   color: rgb(255, 255, 255);
-  width: 242px;
+  width: 240px;
   background: rgb(120, 130, 5) none repeat scroll 0% 0% / auto padding-box border-box;
   border-color: rgb(130, 140, 14);
   border-width: 2px;
