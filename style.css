@@ -20,7 +20,20 @@ h1{
 }
 .dice{
   font-size: 150px;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
 
+.animation-dice{
+  animation: roll;
+}
+@keyframes roll{
+0%{
+transform: rotateY(0deg) rotateX(0deg);
+}
+100%{
+  transform: rotateY(0deg) rotateX(0deg);
+}
 }
 .previous-dice{
   font-size: 70px;
