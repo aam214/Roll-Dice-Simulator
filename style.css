@@ -20,12 +20,12 @@ h1{
 }
 .dice{
   font-size: 150px;
-  animation-duration: 1s;
+  animation-duration: 1.5s;
   animation-fill-mode:both;
 }
 
 .roll-animation{
-  animation: roll 1s forwards;
+  animation: roll 1.5s forwards;
 }
 @keyframes roll{
 0%{
