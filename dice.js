@@ -2,14 +2,16 @@ const buttonRoll = document.getElementById("button-roll");
 const diceElement = document.getElementById("dice");
 
 
-function diceResult(){
+function diceResult() {
 const diceNumber = Math.floor(Math.random() * 6) + 1;
   
-const diceChange =getDiceChange(diceNumber);
+const diceChange = getDiceChange(diceNumber);
+diceElement.innerHTML = diceChange;
+
 }
 
-function getDiceChange(diceNumber){
-  switch(diceNumber){
+function getDiceChange(diceNumber) {
+  switch(diceNumber) {
   case 1:
      return "&#9856;";
 
@@ -27,6 +29,9 @@ function getDiceChange(diceNumber){
       
     case 6:
       return "&#9861;";
+    
+      default: 
+      return "";
 }
 }
 
@@ -35,5 +40,5 @@ diceElement.classList.add("roll-animation");
 setTimeout(() =>{
   diceElement.classList.remove("roll-animation");
   diceResult();
-}, 2000);
+}, 1000);
 });
