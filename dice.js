@@ -1,13 +1,27 @@
 const buttonRoll = document.getElementById("button-roll");
 const diceElement = document.getElementById("dice");
+const history =document.getElementById("history");
 
+let historyList =[];
 
 function diceResult() {
+
 const diceNumber = Math.floor(Math.random() * 6) + 1;
-  
+
 const diceChange = getDiceChange(diceNumber);
 diceElement.innerHTML = diceChange;
+historyList.push(diceNumber);
+updateHistory();
+}
 
+function updateHistory(){
+history.innerHTML = "";
+for (let i = 0; i < historyList.length; i++) {
+  const makeList = document.createElement("li");
+  makeList.innerHTML = `Roll ${i + 1} : 
+  <span>${getDiceChange(historyList[i])}</span>`;
+  history.appendChild(makeList);
+}
 }
 
 function getDiceChange(diceNumber) {
