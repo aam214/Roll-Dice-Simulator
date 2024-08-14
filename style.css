@@ -7,7 +7,7 @@ background-color: #051937;
 text-align: center;
   padding: 40px;
   border-radius: 5px;
-  margin-top: 200px;
+  margin-top: 20px;
   max-width: 800px;
   box-shadow: 15px 15px 20px rgba(0,0,0,0.2);
   background-color: white;
@@ -40,7 +40,7 @@ transform: rotateY(0deg) rotateX(0deg);
 }
 button {
   cursor: pointer;
-  border: 0px solid rgb(187, 204, 0);
+  border: none;
   font-family: "system-ui";
   font-size: 20px;
   color: rgb(255, 255, 255);
@@ -56,20 +56,23 @@ button {
   color: rgb(255, 255, 255);
   width: 240px;
   background: rgb(120, 130, 5) none repeat scroll 0% 0% / auto padding-box border-box;
-  border-color: rgb(130, 140, 14);
-  border-width: 2px;
-  border-style: solid;
   }
+
 ul{
   margin-top: 50px;
 }
 li{
-align-items: baseline;
+  align-items: baseline;
   font-size: 28px;
   list-style: none;
-  box-shadow: 15px 15px 20px rgba(0,0,0,0.2);
-  border: 3px solid  #051937;
+  display: flex;
+  justify-content: space-around;
   margin: 20px;
   border-radius: 5px;
-  padding: 5px;
+ background-color: rgb(189, 191, 201);
+
+}
+.list-dice{
+  font-size: 42px;
+
 }

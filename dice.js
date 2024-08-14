@@ -19,7 +19,7 @@ history.innerHTML = "";
 for (let i = 0; i < historyList.length; i++) {
   const makeList = document.createElement("li");
   makeList.innerHTML = `Roll ${i + 1} : 
-  <span>${getDiceChange(historyList[i])}</span>`;
+  <span class="list-dice">${getDiceChange(historyList[i])}</span>`;
   history.appendChild(makeList);
 }
 }
