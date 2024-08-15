@@ -1,13 +1,18 @@
 const buttonRoll = document.getElementById("button-roll");
 const diceElement = document.getElementById("dice");
-const history =document.getElementById("history");
+const history = document.getElementById("history");
 
 let historyList =[];
 
+buttonRoll.addEventListener("click", () => {
+  diceElement.classList.add("roll-animation");
+  setTimeout(() => {
+    diceElement.classList.remove("roll-animation");
+    diceResult();
+  }, 1000);
+  });
 function diceResult() {
-
 const diceNumber = Math.floor(Math.random() * 6) + 1;
-
 const diceChange = getDiceChange(diceNumber);
 diceElement.innerHTML = diceChange;
 historyList.push(diceNumber);
@@ -17,10 +22,10 @@ updateHistory();
 function updateHistory(){
 history.innerHTML = "";
 for (let i = 0; i < historyList.length; i++) {
-  const makeList = document.createElement("li");
-  makeList.innerHTML = `Roll ${i + 1} : 
-  <span class="list-dice">${getDiceChange(historyList[i])}</span>`;
-  history.appendChild(makeList);
+const makeList = document.createElement("li");
+makeList.innerHTML = `Roll ${i +1} : 
+<span class="list-dice">${getDiceChange(historyList[i])}</span>`;
+history.appendChild(makeList);
 }
 }
 
@@ -49,10 +54,3 @@ function getDiceChange(diceNumber) {
 }
 }
 
-buttonRoll.addEventListener("click", () => {
-diceElement.classList.add("roll-animation");
-setTimeout(() =>{
-  diceElement.classList.remove("roll-animation");
-  diceResult();
-}, 1000);
-});
